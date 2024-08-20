@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
+    Enter value <input type="number" id="1">
+    <button onclick="pattern()">Click</button>
     <p id="1" style="color: white;"></p>
     <script>
-        var a=5;
-        for(var i=1;i<=a;i++){
-            for(var j=a-1;j>=i;j--){
-                document.write("0");
+        function pattern(){
+        var a=document.getElementById('1').value;
+        for (var i = 1; i <= a; i++) {
+            for (var j = a - 1; j >= i; j--) {
+                document.write("&nbsp;&nbsp;")
             }
-            for(var k=1;k<=i;k++){
-                document.getElementById('1').innerHTML="0";
+            for (var k = 1; k <= i; k++) {
+                document.write(k + " ")
             }
             document.write("<br>")
         }
-        </script>
+    }
+    </script>
 </body>
+
 </html>
