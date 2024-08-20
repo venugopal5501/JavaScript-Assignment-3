@@ -10,15 +10,15 @@
     <button onclick="capital()">Click</button>
     <p id="1"></p>
     <script>
-        function capital(){
-        var b = document.getElementById('2').value;
-        var a = b.split(",");;
-        for (var i = 0; i <=a.length-1; i++) {
-            var c = a[i].charAt(0).toUpperCase() + a[i].slice(1);
-            document.getElementById("1").innerHTML+=c +",";
+        function capital() {
+            var b = document.getElementById('2').value;
+            var a = b.split(",");;
+            for (var i = 0; i <= a.length - 1; i++) {
+                var c = a[i].charAt(0).toUpperCase() + a[i].slice(1);
+                document.getElementById("1").innerHTML += c + ",";
+            }
+
         }
-        
-    }
 
     </script>
 </body>
