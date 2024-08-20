@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Days</title>
+</head>
+
+<body>
+    Enter Year <input type="number" id="1"><br><br>
+    Enter Month <input type="number" id="2"><br><br>
+    Enter Date <input type="number" id="3"><br><br>
+
+    <button onclick="year()">Get Year</button>
+    <p id="4"></p>
+
+    <script>
+        function year() {
+
+            var year = Number(document.getElementById("1").value);
+            var month = Number(document.getElementById("2").value);
+            var date = Number(document.getElementById("3").value);
+
+            const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+            const d = new Date(year, month - 1, date);
+            const f=d.getMonth();
+            for(var i=1;i<=months.length;i++){
+                if(f==i)
+
+            {
+                document.getElementById('4').innerHTML=months[i];
+            }
+        }
+    }
+            // document.write(f);
+            // for(var i=0;i<months.length;i++){
+            //     if()
+
+                
+            // }
+
+            
+            // if ((d.getDay() == 0) || (d.getDay() == 6)) {
+            //     document.getElementById("4").innerHTML = "Yes";
+
+            // }
+            // else {
+            //     document.getElementById("4").innerHTML = "no";
+            // }
+        
+
+    </script>
+</body>
+
+</html>
