@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Duplicate</title>
+</head>
+
+<body>
+    <script>
+        let arr = [10, 20, 30, 30, 40, 50];
+        let ar = [];
+        for (var i = 0; i < arr.length; i++) {
+            for (var j = 0; j < arr.length; j++) {
+                if (arr[j] != arr[j + 1]) {
+                    // arr.remove(arr[j+1]);
+                    var temp = arr[j];
+
+                }
+
+            }
+
+        }
+        for (var i = 0; i < arr.length; i++) {
+            document.write(arr[i]);
+        }
+
+        // let indexToRemove = 1;
+        // arr.splice(indexToRemove, 1);
+        // document.write(arr); 
+    </script>
+</body>
+
+</html>
