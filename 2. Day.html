@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Days</title>
+</head>
+
+<body>
+    enter Year-1 <input type="number" id="1">
+    enter year-2 <input type="number" id="2">
+    <button onclick="year()">Get Year</button>
+    <p id="3"></p>
+
+    <script>
+        function year() {
+
+            var a = document.getElementById("1").value;
+            var b = document.getElementById("2").value;
+            for (var i = a; i <= b; i++) {
+                const d = new Date(i, 0, 1);
+                if (d.getDay() == 0) {
+                    document.getElementById("3").innerHTML += i + "<br>";
+
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
