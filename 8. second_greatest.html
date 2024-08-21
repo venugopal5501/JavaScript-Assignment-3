@@ -1,0 +1,100 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = [10001, 99, 34, 1000, 12, 99, 87, 100, 999];
+        var b = a[0];
+        var v = [];
+        for (var i = 1; i <= a.length; i++) {
+            if (b < a[i]) {
+                b = a[i];
+            }
+        }
+        // for (var j=0;j<a.)
+        document.write(b);
+
+    </script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center> Enter Numbers separated by comma <input type="text" id="1"> <br><br>
+        Enter smallest number to find <input type="text" id="2"><br><br>
+        Enter largest number to find <input type="text" id="3"><br><br>
+        <p id="4"></p>
+        <p id="5"></p>
+        <p id="6"></p>
+        <button onclick="find()">Click</button>
+        <script>
+            function find() {
+                var inputString = document.getElementById("1").value;
+                var a = inputString.split(",").map(Number);
+                var b = [];
+                for (var i = 0; i < a.length; i++) {
+                    for (var j = 0; j < a.length; j++) {
+                        if (a[j] > a[j + 1]) {
+                            var temp = a[j + 1];
+                            a[j + 1] = a[j];
+                            a[j] = temp;
+                        }
+                    }
+                }
+                var smallest = Number(document.getElementById('2').value);
+                var largest = Number(document.getElementById('3').value);
+                var vc = a.length;
+                var va = a.length;
+                // var v = 
+                document.write(a + "<br><br>")
+                // document.getElementById("4").innerHTML = v;
+
+
+                for (var i = 0; i < vc; i++) {
+                    // document.write(a[i]+",");
+                    // document.write(i-c);
+
+
+
+                }
+                // var u = 
+                document.write("Smallest : " + a[smallest - 1] + "," + "<br><br>");
+                // document.getElementById("5").innerHTML = u;
+
+                for (var j = va - 1; j >= 0; j--) {
+                    b.push(a[j]);
+                    // document.write(a[j] + ",");
+                    // document.write()
+                    // 
+
+
+
+                }
+                // document.write(b);
+                // var t = 
+                document.write("Largest : " + b[largest - 1] + ",");
+                // document.getElementById("6").innerHTML = t;
+
+                // 
+            }
+
+        </script>
+
+</body>
+
+</html>
