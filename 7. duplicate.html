@@ -1,38 +1,27 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Duplicate</title>
-</head>
 
 <body>
+    Enter a string <input type="text" id="str">
+    <button onclick="duplicate()">Click</button>
+    <p id="p"></p>
+
     <script>
-        let arr = [10, 40, 20, 30, 30, 40, 50];
-        let ar = [];
-        for (var i = 0; i < arr.length-1; i++) {
-            for (var j = 0; j < arr.length; j++) {
-                if (arr[j] == arr[j + 1]) {
-                    // arr.remove(arr[j+1]);
-                    arr.splice(j, 1);
-                    i--;
-                    ar.push(arr[j]);
-                }
-
-
-
-            }
-
-
+        function duplicate() {
+            var w = document.getElementById('str').value.toLowerCase();
+            var c = w.split(",");
+            var set = new Set(c);
+            document.getElementById("p").innerHTML = Array.from(set);
         }
-        document.write(arr);
-        for (var i = 0; i < arr.length; i++) {
-
-        }
-
-        // let indexToRemove = 1;
-        // arr.splice(indexToRemove, 1);
-        // document.write(arr); 
     </script>
 </body>
+</head>
+
+
 
 </html>
