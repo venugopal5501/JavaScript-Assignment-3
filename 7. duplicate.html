@@ -7,21 +7,28 @@
 
 <body>
     <script>
-        let arr = [10, 20, 30, 30, 40, 50];
+        let arr = [10, 40, 20, 30, 30, 40, 50];
         let ar = [];
-        for (var i = 0; i < arr.length; i++) {
+        for (var i = 0; i < arr.length-1; i++) {
             for (var j = 0; j < arr.length; j++) {
-                if (arr[j] != arr[j + 1]) {
+                if (arr[j] == arr[j + 1]) {
                     // arr.remove(arr[j+1]);
-                    var temp = arr[j];
+                    arr.splice(j, 1);
+                    i--;
+                    ar.push(arr[j]);
+
 
                 }
 
+
+
             }
 
+
         }
+        document.write(arr);
         for (var i = 0; i < arr.length; i++) {
-            document.write(arr[i]);
+
         }
 
         // let indexToRemove = 1;
