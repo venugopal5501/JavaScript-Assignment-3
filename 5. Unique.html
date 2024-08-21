@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duplicate</title>
+
+<body>
+    Enter a string <input type="text" id="str">
+    <button onclick="unique()">Click</button>
+    <p id="p"></p>
+
+    <script>
+        function unique() {
+            var c=document.getElementById('str').value.toLowerCase();
+            var d=c.split("");
+            var set = new Set(d);
+            document.getElementById('p').innerHTML=Array.from(set).join("");
+            
+        }
+    </script>
+</body>
+</head>
+
+
+
+</html>
