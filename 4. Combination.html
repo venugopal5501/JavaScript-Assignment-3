@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function generateCombinations(str) {
+
+            let result = [];
+
+            function combine(prefix, remaining) {
+                if (prefix) {
+                    result.push(prefix);
+                }
+                for (let i = 0; i < remaining.length; i++) {
+                    combine(prefix + remaining[i], remaining.slice(i + 1));
+                }
+            }
+
+            combine('', str);
+            return result;
+        }
+
+        // Example usage
+        let string = 'dog';
+        let combinations = generateCombinations(string);
+        document.write(combinations);
+    </script>
+</body>
+
+</html>
